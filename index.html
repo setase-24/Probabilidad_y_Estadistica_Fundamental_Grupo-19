@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Estadística con casos reales</title>
+<title>Estudios de Caso · Probabilidad y Estadística</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Doce casos reales de economía y finanzas con datos originales y scripts en R y Python. Material de apoyo para Probabilidad y Estadística Fundamental, Universidad Nacional de Colombia.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -156,11 +156,20 @@ td.esc{font-weight:500;color:var(--verde-texto);white-space:nowrap}
 
 .vacio{text-align:center;color:var(--tenue)}
 .arriba{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));font:700 .8rem var(--f-sans);background:var(--carbon);color:var(--carbon-texto);text-decoration:none;padding:10px 12px;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.2)}
-footer{background:var(--carbon);color:var(--carbon-tenue);font:400 .92rem/1.55 var(--f-sans)}
-footer .wrap{padding-block:28px 56px;display:grid;gap:8px}
-footer p{margin:0;max-width:80ch}
-footer b{color:var(--carbon-texto)}
-footer a{color:var(--verde)}
+.bajada{font:400 clamp(1.1rem,2vw,1.35rem)/1.35 var(--f-serif);font-style:italic;color:var(--tenue);margin:10px 0 0;max-width:30ch}
+footer{background:var(--carbon);color:var(--carbon-tenue);font:400 .94rem/1.6 var(--f-sans);border-top:4px solid var(--verde)}
+.pie{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.8fr) minmax(0,1.2fr);gap:28px 48px;padding-block:40px 36px}
+@media (max-width:800px){.pie{grid-template-columns:minmax(0,1fr)}}
+.pie p{margin:0 0 10px}
+.pie-titulo{font:700 1.6rem/1.1 var(--f-serif);color:var(--carbon-texto);margin-bottom:12px!important}
+.pie-h{font:700 .74rem var(--f-sans);letter-spacing:.14em;text-transform:uppercase;color:var(--verde);margin-bottom:12px!important}
+.firma{font:700 1.05rem/1.3 var(--f-sans);color:var(--carbon-texto);margin-top:16px!important;padding-left:12px;border-left:3px solid var(--verde)}
+.firma span{display:block;font-weight:400;font-size:.88rem;color:var(--carbon-tenue)}
+.pie ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.pie a{color:var(--carbon-texto);text-decoration-color:var(--verde);text-underline-offset:3px}
+.pie a:hover{color:var(--verde)}
+.pie-base{border-top:1px solid #ffffff1f}
+.pie-base .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 20px;padding-block:14px 64px;font-size:.84rem}
 @media (prefers-reduced-motion:no-preference){.copiar,.chip,.lang,.indice a{transition:background .15s,border-color .15s}}
 </style>
 
@@ -172,8 +181,9 @@ footer a{color:var(--verde)}
 
 <header class="top"><div class="wrap">
   <div>
-    <p class="kicker">Monitorías · Material de apoyo para el primer parcial</p>
-    <h1>Estadística con <span>casos reales</span></h1>
+    <p class="kicker">Monitorías · Material complementario del primer módulo</p>
+    <h1>Estudios <span>de Caso</span></h1>
+    <p class="bajada">Estadística descriptiva y probabilidad en la economía, las finanzas y la contaduría</p>
     <p class="autor">Preparado por <b>Sebastián Tabares</b> para los estudiantes de la Facultad de Ciencias Económicas</p>
   </div>
   <div class="intro just">
@@ -1980,11 +1990,29 @@ print(f<span class="st">&quot;(NOT retraso) AND (NOT cupo bajo):     {(~retraso 
 
 <a class="arriba" href="#inicio">↑ Índice</a>
 
-<footer><div class="wrap">
-  <p><b>Estadística con casos reales</b> · Material de las monitorías de Probabilidad y Estadística Fundamental, Grupo 19, preparado por <b>Sebastián Tabares</b>, Universidad Nacional de Colombia.</p>
-  <p>Datos y scripts en <a href="https://github.com/setase-24/Probabilidad_y_Estadistica_Fundamental_Grupo-19" target="_blank" rel="noopener">github.com/setase-24/Probabilidad_y_Estadistica_Fundamental_Grupo-19</a>. Cada conjunto de datos tiene su ficha en <code>datos/LEEME.md</code> con fuente, licencia y advertencias.</p>
-  <p>Donde los datos originales no son públicos (JPMorgan, los CDO de 2008), el caso lo dice y usa datos reales del mercado que muestran el mismo fenómeno.</p>
-</div></footer>
+<footer>
+  <div class="wrap pie">
+    <div class="pie-col pie-autor">
+      <p class="pie-titulo">Estudios de Caso</p>
+      <p>Material complementario del primer módulo de Probabilidad y Estadística Fundamental, preparado para las monitorías del Grupo 19.</p>
+      <p class="firma">Sebastián Tabares<span>Monitor · Universidad Nacional de Colombia</span></p>
+    </div>
+    <div class="pie-col">
+      <p class="pie-h">Recursos</p>
+      <ul>
+        <li><a href="https://github.com/setase-24/Probabilidad_y_Estadistica_Fundamental_Grupo-19" target="_blank" rel="noopener">Repositorio en GitHub</a></li>
+        <li><a href="https://github.com/setase-24/Probabilidad_y_Estadistica_Fundamental_Grupo-19/archive/refs/heads/main.zip">Descargar todo (ZIP)</a></li>
+        <li><a href="https://github.com/setase-24/Probabilidad_y_Estadistica_Fundamental_Grupo-19/blob/main/datos/LEEME.md" target="_blank" rel="noopener">Fichas de los datos</a></li>
+        <li><a href="https://github.com/setase-24/Probabilidad_y_Estadistica_Fundamental_Grupo-19/tree/main/scripts" target="_blank" rel="noopener">Scripts en R y Python</a></li>
+      </ul>
+    </div>
+    <div class="pie-col">
+      <p class="pie-h">Sobre los datos</p>
+      <p>Cada conjunto de datos indica su fuente original y su licencia. Donde los datos no son públicos (JPMorgan, los CDO de 2008), el caso lo advierte y usa datos reales del mercado que muestran el mismo fenómeno.</p>
+    </div>
+  </div>
+  <div class="pie-base"><div class="wrap"><span>Universidad Nacional de Colombia · Probabilidad y Estadística Fundamental · Grupo 19</span><span>2026-II</span></div></div>
+</footer>
 </div>
 
 <script>
