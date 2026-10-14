@@ -52,7 +52,7 @@ code{font-family:var(--f-mono);font-size:.84em}
 
 /* Portada */
 .top{background:var(--hoja);border-bottom:1px solid var(--linea)}
-.top .wrap{padding-block:48px 34px;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:28px 56px;align-items:end}
+.top .wrap{padding-block:48px 34px;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:28px 56px;align-items:start}
 @media (max-width:900px){.top .wrap{grid-template-columns:minmax(0,1fr)}}
 .kicker{font:700 .78rem/1.3 var(--f-sans);letter-spacing:.14em;text-transform:uppercase;color:var(--verde-texto);margin:0 0 14px}
 h1{font:700 clamp(2.4rem,5.6vw,4.2rem)/1.03 var(--f-serif);margin:0;text-wrap:balance;letter-spacing:-.01em}
@@ -95,7 +95,7 @@ main{padding-block:32px 72px;display:grid;grid-template-columns:minmax(0,1fr);ga
 .como li{min-width:0;overflow-wrap:anywhere}
 
 /* Caso */
-.caso{background:var(--hoja);border:1px solid var(--linea);border-radius:4px;overflow:hidden;scroll-margin-top:72px}
+.caso{background:var(--hoja);border:1px solid var(--linea);border-radius:4px;overflow:hidden;scroll-margin-top:96px}
 .caso > header{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 20px;align-items:center;padding:22px clamp(18px,3vw,36px);border-bottom:1px solid var(--linea);background:linear-gradient(var(--verde),var(--verde)) left top/100% 4px no-repeat}
 .num{font:700 clamp(2.4rem,5vw,3.4rem)/1 var(--f-serif);color:var(--verde-texto);font-variant-numeric:tabular-nums;grid-row:span 3}
 .exp{font:700 .76rem/1.3 var(--f-sans);letter-spacing:.12em;text-transform:uppercase;color:var(--vino);margin:0}
@@ -106,6 +106,8 @@ main{padding-block:32px 72px;display:grid;grid-template-columns:minmax(0,1fr);ga
 @media (max-width:900px){.cols{grid-template-columns:minmax(0,1fr);gap:24px}}
 .relato{min-width:0}
 .relato > p{margin:0 0 14px}
+.relato a{text-decoration-color:var(--verde);text-decoration-thickness:1.5px}
+.relato a::after{content:"↗";font-size:.75em;margin-left:1px;text-decoration:none;display:inline-block}
 .leccion{background:var(--verde-suave);border-left:4px solid var(--verde);padding:12px 16px;margin:18px 0 0;border-radius:0 4px 4px 0}
 .leccion b{font-family:var(--f-sans);font-weight:700}
 .pensar{margin-top:18px;border:1px solid var(--vino);border-radius:4px;padding:12px 16px}
@@ -170,13 +172,13 @@ footer a{color:var(--verde)}
 
 <header class="top"><div class="wrap">
   <div>
-    <p class="kicker">Material de apoyo · Primer parcial</p>
+    <p class="kicker">Monitorías · Material de apoyo para el primer parcial</p>
     <h1>Estadística con <span>casos reales</span></h1>
     <p class="autor">Preparado por <b>Sebastián Tabares</b> para los estudiantes de la Facultad de Ciencias Económicas</p>
   </div>
   <div class="intro just">
-    <p>En 2013 un estudiante de doctorado encontró un error de Excel en un estudio de economía que se había usado para defender recortes en Europa y Estados Unidos. Años antes, un analista había usado una desviación estándar para mostrar que el fondo de Bernie Madoff era un fraude. Los doce casos de esta página pasaron de verdad, y todos se resuelven con lo que se ve en el primer parcial: tablas de frecuencia, medidas de centro y dispersión, correlación, conteo y probabilidad condicional.</p>
-    <p>Cada caso trae los datos originales, o los más cercanos que son públicos, y un script en R y otro en Python listos para correr. Ejecútalos, cambia lo que quieras y al final responde la pregunta del caso con tus propias palabras.</p>
+    <p>Esta página hace parte de las monitorías de Probabilidad y Estadística Fundamental. Su primer propósito es práctico: que te familiarices con R, y si quieres también con Python, corriendo y modificando código que analiza datos de verdad.</p>
+<p>El segundo propósito nace de una realidad nueva. Hoy una inteligencia artificial escribe en segundos el código que antes tomaba una tarde, así que escribirlo ya no es lo difícil. Lo difícil es saber qué preguntarle a los datos y reconocer cuándo una respuesta no tiene sentido. Para eso sirven los temas del curso, y estos doce casos muestran cómo se han usado (o ignorado) en situaciones reales de la economía, las finanzas, la contaduría y la administración: un error de Excel que respaldó políticas de austeridad, un fraude que delataba su propia desviación estándar, una encuesta gigante que se equivocó.</p>
   </div>
   <div class="cifras">
     <div><b>12</b>casos reales</div>
@@ -221,7 +223,7 @@ footer a{color:var(--verde)}
   </header>
   <div class="cols">
     <div class="relato">
-      <p class="just">La revista Literary Digest envió unos 10 millones de papeletas y recibió cerca de 2,4 millones. Con eso predijo que Alf Landon le ganaría a Franklin D. Roosevelt. Roosevelt ganó con el 61 % del voto y se llevó 46 de los 48 estados. Las direcciones salieron de directorios telefónicos, registros de autos y listas de suscriptores: en plena Gran Depresión, eso era una muestra de gente con más dinero que el promedio, y además solo respondió quien quiso.</p>
+      <p class="just">En el otoño de 1936, la revista <i>The Literary Digest</i> hizo algo que nadie había intentado: envió diez millones de papeletas a sus suscriptores, a dueños de teléfono y a propietarios de automóviles. Le respondieron unos 2,4 millones. Con esa montaña de papel anunció que Alf Landon derrotaría a Franklin D. Roosevelt. Semanas después, Roosevelt ganó con el 61 % de los votos y se llevó 46 de los 48 estados; la revista dejó de circular poco tiempo después. El tamaño de la muestra nunca fue el problema. En plena Gran Depresión, tener teléfono o carro era cosa de gente acomodada, y además solo contestó quien quiso hacerlo. Dominic Lusinchi <a href="https://pdixon.stat.iastate.edu/stat587/resources/president-landon-and-the-1936-literary-digest-poll-were-automobile-and-telephone-owners-to-blame.pdf" target="_blank" rel="noopener">revisó el caso en 2012</a> con encuestas de la época, y Kyle Siegrist <a href="https://randomservices.org/random/data/LiteraryDigest.html" target="_blank" rel="noopener">transcribió los resultados por estado</a>.</p>
       <p class="leccion just"><b>Lo que enseña.</b> Una muestra enorme pero sesgada no se arregla con más datos. Lo mismo pasa hoy con datos obtenidos por scraping: son lo que la página deja ver, no la población.</p>
       <div class="pensar"><h3>Para pensar</h3><p class="just">Roosevelt sacó el 61 % real. ¿Por qué 2,4 millones de respuestas no bastaron? ¿Qué parte del error viene de a quién se le envió la papeleta y qué parte de quién decidió responder?</p></div>
     </div>
@@ -368,7 +370,7 @@ plt.show()
   </header>
   <div class="cols">
     <div class="relato">
-      <p class="just">En 2010 Carmen Reinhart y Kenneth Rogoff publicaron que los países con deuda pública mayor al 90 % del PIB crecían en promedio −0,1 % al año. El dato se citó en Europa y Estados Unidos para defender recortes. En 2013 Thomas Herndon, estudiante de doctorado, no pudo replicarlo. Al pedir la hoja de cálculo encontró que un rango mal seleccionado dejaba por fuera a cinco países, que se excluían años sin explicación y que cada país pesaba igual sin importar cuántos años aportaba.</p>
+      <p class="just">En 2010, Carmen Reinhart y Kenneth Rogoff, dos de los economistas más citados de Harvard, publicaron un artículo breve en la <i>American Economic Review</i>: <a href="https://doi.org/10.1257/aer.100.2.573" target="_blank" rel="noopener">«Growth in a Time of Debt»</a>. Su conclusión cabía en un titular: cuando la deuda pública supera el 90 % del PIB, el crecimiento se hunde, en promedio −0,1 % al año. Gobiernos de Europa y Estados Unidos lo citaron para justificar recortes. En 2013, Thomas Herndon, estudiante de doctorado en UMass Amherst, intentó replicarlo como tarea de clase y no pudo. Pidió la hoja de Excel a los autores y encontró el problema: un rango mal seleccionado dejaba por fuera a cinco países, había años excluidos sin explicación y cada país pesaba lo mismo sin importar cuántos años aportaba. Con los datos corregidos, el crecimiento promedio en ese tramo era de 2,2 %. Herndon, Michael Ash y Robert Pollin publicaron <a href="https://doi.org/10.1093/cje/bet075" target="_blank" rel="noopener">la crítica</a> y dejaron <a href="https://zenodo.org/records/4017423" target="_blank" rel="noopener">los datos y el código</a> a disposición de cualquiera.</p>
       <p class="leccion just"><b>Lo que enseña.</b> La forma de promediar cambia la conclusión. Un script que cualquiera puede volver a correr habría mostrado el error de inmediato; una celda de Excel lo escondió durante tres años.</p>
       <div class="pensar"><h3>Para pensar</h3><p class="just">En la versión publicada, Nueva Zelanda aportaba un solo año a la categoría &gt;90% (1951, con crecimiento de −7,6 %) y el Reino Unido aportaba 19. Con promedios por país, ese único año pesa lo mismo que los 19 británicos. ¿Es justo? ¿Qué pregunta responde cada forma de promediar?</p></div>
     </div>
@@ -524,7 +526,7 @@ plt.show()
   </header>
   <div class="cols">
     <div class="relato">
-      <p class="just">Fairfield Sentry era el mayor fondo que entregaba dinero a Bernard Madoff. Reportaba cerca de 1 % de rentabilidad cada mes, casi sin meses negativos, durante 18 años. Harry Markopolos le escribió a la SEC desde 2000 que esos números eran imposibles para la estrategia que Madoff decía usar, y en 2005 tituló su memo «The World&#x27;s Largest Hedge Fund is a Fraud». Nadie le hizo caso hasta que el fraude se derrumbó en diciembre de 2008, con pérdidas de unos 65.000 millones de dólares en papel.</p>
+      <p class="just">Durante casi dos décadas, Fairfield Sentry, el mayor de los fondos que le entregaban dinero a Bernard Madoff, reportó ganancias cercanas al 1 % mensual, con apenas un puñado de meses en rojo. Así lo mostraba su <a href="https://www.finanzwesir.com/assets/files/FairfieldSentryLtd.pdf" target="_blank" rel="noopener">hoja informativa</a>. Harry Markopolos, un analista financiero de Boston, intentó reproducir la estrategia que Madoff decía usar y no lo logró: ningún mercado real produce una curva tan lisa. Advirtió a la SEC varias veces desde el año 2000; su memo de 2005 se tituló <a href="https://www.propublica.org/article/the-worlds-largest-hedge-fund-is-a-fraud-1219" target="_blank" rel="noopener">«The World’s Largest Hedge Fund is a Fraud»</a>. Nadie actuó. El fraude se derrumbó por su propio peso en diciembre de 2008, con pérdidas en papel de unos 65.000 millones de dólares. Un año después, el <a href="https://www.sec.gov/files/oig-509-exec-summary.pdf" target="_blank" rel="noopener">inspector general de la SEC</a> reconstruyó cada alerta que se ignoró.</p>
       <p class="leccion just"><b>Lo que enseña.</b> El dato raro no siempre es un valor extremo. A veces lo anómalo es una dispersión demasiado baja frente a la de un mercado real.</p>
       <div class="pensar"><h3>Para pensar</h3><p class="just">La hoja informativa del fondo dice «solo 13 meses con pérdida». Cuenta tú los meses negativos en la tabla. ¿Coinciden? ¿Qué te dice eso de confiar en el resumen sin mirar los datos?</p></div>
     </div>
@@ -681,7 +683,7 @@ print(f<span class="st">&quot;Correlación Fairfield vs S&amp;P 500: {r:.2f}&quo
   </header>
   <div class="cols">
     <div class="relato">
-      <p class="just">En cifras reales de contabilidad y finanzas públicas, el primer dígito no es uniforme: el 1 aparece cerca del 30 % de las veces y el 9 menos del 5 %. Es la ley de Benford. En 2011 Rauch, Göttsche, Brähler y Engel compararon las cifras fiscales que cada país de la UE envió a Eurostat entre 1999 y 2009: Grecia fue el país que más se alejaba de Benford. Para entonces ya había admitido que había maquillado su déficit para entrar al euro. Los auditores forenses usan esta prueba de forma rutinaria.</p>
+      <p class="just">En 1938, Frank Benford, físico de General Electric, notó algo extraño en tablas de datos reales: el primer dígito no se reparte por igual. El 1 encabeza cerca del 30 % de las cifras y el 9, menos del 5 %. Hoy la ley de Benford es una prueba de rutina en la auditoría forense, porque los números inventados a mano casi nunca la cumplen. En 2011, Bernhard Rauch y tres colegas <a href="https://ideas.repec.org/a/bpj/germec/v12y2011i3p243-255.html" target="_blank" rel="noopener">la aplicaron</a> a las cifras fiscales que cada país de la Unión Europea había enviado a <a href="https://ec.europa.eu/eurostat/databrowser/view/gov_10a_main/default/table" target="_blank" rel="noopener">Eurostat</a> entre 1999 y 2009. El país que más se alejaba de la ley era Grecia, el mismo que a finales de 2009 había reconocido que su déficit real era muy superior al que reportaba.</p>
       <p class="leccion just"><b>Lo que enseña.</b> Una tabla de frecuencias de nueve filas puede funcionar como alarma de fraude. Ojo: estos datos son la versión actual de Eurostat, ya corregida después de 2010, así que el resultado de 2011 puede no repetirse. Eso también es una lección.</p>
       <div class="pensar"><h3>Para pensar</h3><p class="just">¿En qué posición quedó Grecia con los datos corregidos? Si un país corrige sus cifras después de un escándalo, ¿qué esperarías que le pase a su ajuste con Benford?</p></div>
     </div>
@@ -829,7 +831,7 @@ plt.show()
   </header>
   <div class="cols">
     <div class="relato">
-      <p class="just">Una mesa de derivados de JPMorgan en Londres perdió unos 6.200 millones de dólares. El informe interno del banco encontró que el nuevo modelo de Value at Risk (VaR) se armaba en hojas de Excel con datos copiados y pegados a mano. En un paso, una fórmula dividía por la suma de dos tasas en lugar de por su promedio. Eso reducía la volatilidad calculada más o menos a la mitad, y el riesgo parecía menor de lo que era.</p>
+      <p class="just">En 2012, un operador de JPMorgan en Londres acumuló posiciones tan grandes en derivados de crédito que el mercado lo apodó «la ballena». Cuando las apuestas se torcieron, el banco perdió unos 6.200 millones de dólares. El <a href="https://elischolar.library.yale.edu/cgi/viewcontent.cgi?article=1502&context=ypfs-documents" target="_blank" rel="noopener">informe interno del banco</a> encontró que el nuevo modelo de <i>Value at Risk</i> se alimentaba de hojas de Excel con datos copiados y pegados a mano, y que una fórmula dividía por la suma de dos tasas en lugar de por su promedio. La volatilidad calculada quedó en la mitad y el riesgo pareció mucho menor de lo que era. Meses después, el <a href="https://www.hsgac.senate.gov/wp-content/uploads/imo/media/doc/REPORT%20-%20JPMorgan%20Chase%20Whale%20Trades%20(3-15-13).pdf" target="_blank" rel="noopener">Senado de Estados Unidos</a> publicó su propia investigación.</p>
       <p class="leccion just"><b>Lo que enseña.</b> La desviación estándar es la medida de riesgo más usada en finanzas. Un error de un factor 2 en ella cambia decisiones de miles de millones. Los datos de JPMorgan no son públicos; aquí se reproduce el mismo error con datos reales del mercado.</p>
       <div class="pensar"><h3>Para pensar</h3><p class="just">Si el VaR dice «95 % de los meses perderás menos de X», ¿cuántos meses de cada 100 esperarías que se pase? ¿Qué te dice que en 2008 se haya pasado muchas más veces?</p></div>
     </div>
@@ -979,7 +981,7 @@ plt.show()
   </header>
   <div class="cols">
     <div class="relato">
-      <p class="just">Antes de 2008, Wall Street valoraba paquetes de hipotecas (CDO) con un modelo de David Li, la cópula gaussiana, que resumía en un número la correlación entre los impagos. Ese número se estimó con datos de años en que los precios de vivienda subían y cada ciudad se movía a su ritmo. Si Miami caía, Denver no tenía por qué caer. En 2007 cayeron todas al tiempo, los impagos se volvieron mucho más correlacionados de lo supuesto, y los papeles «AAA» se desplomaron. Los datos de los CDO son privados; los índices de precios por ciudad son públicos.</p>
+      <p class="just">En 2000, el matemático David X. Li publicó <a href="https://papers.ssrn.com/abstract=189908" target="_blank" rel="noopener">un modelo</a> que resumía en un solo número la correlación entre los impagos de miles de hipotecas: la cópula gaussiana. Wall Street lo adoptó para valorar los CDO, paquetes de deuda hipotecaria que las calificadoras sellaban como «AAA». Ese número se estimaba con datos de años en que los precios de la vivienda subían y cada ciudad seguía su propio ritmo: si Miami caía, Denver no tenía por qué caer. En 2007 cayeron todas al tiempo, los impagos resultaron mucho más correlacionados de lo supuesto y los papeles «seguros» se desplomaron. La revista <i>Wired</i> lo contó en <a href="https://www.wired.com/2009/02/wp-quant/" target="_blank" rel="noopener">«Recipe for Disaster: The Formula That Killed Wall Street»</a>. Los datos de los CDO son privados, pero los <a href="https://fred.stlouisfed.org/series/SPCS20RSA" target="_blank" rel="noopener">índices de precios por ciudad</a> son públicos.</p>
       <p class="leccion just"><b>Lo que enseña.</b> Un coeficiente de correlación describe un periodo, no una ley fija. Con estos datos la correlación promedio entre ciudades pasa de 0,19 a 0,50 al empezar la crisis.</p>
       <div class="pensar"><h3>Para pensar</h3><p class="just">Si un banco diversificó comprando hipotecas en 20 ciudades porque «no están muy correlacionadas», ¿qué le pasó a esa diversificación en 2007? ¿Qué supuesto falló?</p></div>
     </div>
@@ -1136,7 +1138,7 @@ plt.show()
   </header>
   <div class="cols">
     <div class="relato">
-      <p class="just">El estadístico Francis Anscombe construyó en 1973 cuatro conjuntos de 11 puntos con la misma media, la misma varianza y la misma correlación (0,82), pero con gráficas completamente distintas: una recta, una curva, un atípico que tuerce todo. En 2017 Justin Matejka y George Fitzmaurice llevaron la idea más lejos con 13 conjuntos que comparten resúmenes hasta el segundo decimal; uno de ellos dibuja un dinosaurio.</p>
+      <p class="just">En 1973, el estadístico Francis Anscombe publicó <a href="https://doi.org/10.1080/00031305.1973.10478966" target="_blank" rel="noopener">cuatro conjuntos de once puntos</a> que comparten media, varianza y correlación (0,82), pero dibujan figuras completamente distintas: una recta, una curva, una línea perfecta arruinada por un solo dato atípico. Su mensaje, para una época que empezaba a confiar ciegamente en las computadoras, era sencillo: primero hay que graficar. En 2017, Justin Matejka y George Fitzmaurice, investigadores de Autodesk, llevaron la idea al extremo con <a href="https://doi.org/10.1145/3025453.3025912" target="_blank" rel="noopener">trece conjuntos</a> que coinciden hasta el segundo decimal. Uno de ellos es un dinosaurio.</p>
       <p class="leccion just"><b>Lo que enseña.</b> Un reporte financiero con solo medias y correlaciones puede esconder cualquier cosa. Siempre se grafica antes de calcular.</p>
       <div class="pensar"><h3>Para pensar</h3><p class="just">Si un analista te entrega solo la tabla de resúmenes, ¿podrías saber cuál conjunto es el dinosaurio? ¿Qué le pedirías antes de creer en una correlación?</p></div>
     </div>
@@ -1293,7 +1295,7 @@ print(f<span class="st">&quot;\nConjunto 3: r con atípico = {c3[&#x27;x&#x27;].
   </header>
   <div class="cols">
     <div class="relato">
-      <p class="just">En 1973 Berkeley admitió al 44 % de los hombres que se postularon a posgrado y solo al 30 % de las mujeres. Parecía un caso claro de discriminación. Al desagregar por departamento, la diferencia casi desaparece, y en el departamento más grande las mujeres tenían mayor tasa de admisión. Las mujeres se postulaban más a los departamentos donde casi nadie entraba. Bickel, Hammel y O&#x27;Connell lo publicaron en Science en 1975.</p>
+      <p class="just">En el otoño de 1973, la Universidad de California en Berkeley admitió al 44 % de los hombres que se postularon a posgrado y apenas al 30 % de las mujeres. Las cifras parecían una prueba de discriminación. El estadístico Peter Bickel las desagregó por departamento y la diferencia casi desapareció; en cuatro de los seis departamentos más grandes, las mujeres tenían una tasa de admisión mayor. Lo que ocurría era que las mujeres se postulaban sobre todo a los programas más competidos, donde casi nadie entraba. Bickel, Hammel y O’Connell publicaron el análisis en <a href="https://doi.org/10.1126/science.187.4175.398" target="_blank" rel="noopener"><i>Science</i> en 1975</a>, y hoy es el ejemplo clásico de la paradoja de Simpson.</p>
       <p class="leccion just"><b>Lo que enseña.</b> P(admitido | mujer) no es lo mismo que P(admitido | mujer, departamento). Un group_by de más o de menos cambia la conclusión.</p>
       <div class="pensar"><h3>Para pensar</h3><p class="just">¿En qué departamentos se postulaban más las mujeres, y qué tan difícil era entrar ahí? ¿Qué otra variable escondida podría cambiar una conclusión en una base de datos de crédito o de salarios?</p></div>
     </div>
@@ -1430,7 +1432,7 @@ plt.show()
   </header>
   <div class="cols">
     <div class="relato">
-      <p class="just">Cash WinFall era una lotería de 6 números entre 46. Tenía una regla de «roll-down»: si el premio mayor pasaba de 2 millones de dólares y nadie acertaba los seis, ese dinero se repartía entre quienes acertaban 3, 4 o 5. En esas semanas, el valor esperado de un tiquete de 2 dólares era mayor que 2. Un grupo de estudiantes del MIT y un jubilado de Michigan, Gerald Selbee, lo calcularon y compraron cientos de miles de tiquetes por sorteo. Ganaron millones de forma legal hasta que el juego se cerró en 2012.</p>
+      <p class="just">Cash WinFall era una lotería de Massachusetts con una regla peculiar: si el premio mayor pasaba de 2 millones de dólares y nadie acertaba los seis números, ese dinero «rodaba» hacia quienes acertaban tres, cuatro o cinco. En esas semanas, un tiquete de 2 dólares valía en promedio más de 2 dólares. Gerald Selbee, un jubilado de Michigan, lo notó primero; después lo hizo un grupo de estudiantes del MIT. Compraban cientos de miles de tiquetes por sorteo y ganaron millones de forma legal, hasta que el juego se cerró en 2012. El <a href="https://archives.lib.state.ma.us/server/api/core/bitstreams/ea1512d5-cb14-4881-a5c1-67fc2cfabcb5/content" target="_blank" rel="noopener">informe del inspector general del estado</a> reconstruyó cómo pasó.</p>
       <p class="leccion just"><b>Lo que enseña.</b> Contar combinaciones no es un ejercicio de tablero: es la base para saber si una apuesta, un seguro o un producto financiero tiene valor esperado positivo.</p>
       <div class="pensar"><h3>Para pensar</h3><p class="just">¿Por qué el estado no perdía plata aunque estos grupos ganaran? ¿Quién estaba pagando las ganancias de los grupos organizados?</p></div>
     </div>
@@ -1550,7 +1552,7 @@ print(<span class="st">&quot;Si es mayor que el precio, comprar muchísimos tiqu
   </header>
   <div class="cols">
     <div class="relato">
-      <p class="just">En 2002 el programador Paul Graham publicó «A Plan for Spam». Su idea: para cada palabra, estimar P(spam | la palabra aparece) con el teorema de Bayes a partir de correos ya clasificados, y combinar las palabras del mensaje. Con eso su bandeja quedó casi sin spam. Los filtros de Gmail y Outlook empezaron así. Estos datos son 4.601 correos reales que empleados de Hewlett-Packard clasificaron a mano en 1999.</p>
+      <p class="just">En agosto de 2002, el programador Paul Graham publicó un ensayo titulado <a href="https://www.paulgraham.com/spam.html" target="_blank" rel="noopener">«A Plan for Spam»</a>. Su propuesta era aplicar el teorema de Bayes: a partir de correos ya clasificados, estimar para cada palabra la probabilidad de que un mensaje que la contiene sea basura, y luego combinar las palabras del mensaje. Con eso su bandeja quedó casi limpia, y los filtros de los grandes servicios de correo se construyeron sobre la misma idea. Los datos de este caso son <a href="https://archive.ics.uci.edu/dataset/94/spambase" target="_blank" rel="noopener">4.601 correos reales</a> que empleados de Hewlett-Packard clasificaron a mano en 1999.</p>
       <p class="leccion just"><b>Lo que enseña.</b> El teorema de Bayes es una línea de código que separa millones de correos al día.</p>
       <div class="pensar"><h3>Para pensar</h3><p class="just">Este filtro se entrenó con los correos de una sola empresa. ¿Funcionaría igual con tu correo de la universidad? ¿Qué palabras cambiarías?</p></div>
     </div>
@@ -1692,7 +1694,7 @@ print(<span class="st">&quot;¿Son iguales?&quot;</span>, (forma_1 == forma_2).a
   </header>
   <div class="cols">
     <div class="relato">
-      <p class="just">Un banco europeo y la Universidad Libre de Bruselas publicaron dos días de transacciones reales con tarjeta: 284.807 operaciones, de las cuales 492 fueron fraude, apenas el 0,17 %. Las columnas V1 a V28 están anonimizadas para proteger a los clientes. Cuando el fraude es así de raro, hasta un detector muy bueno genera más alarmas falsas que verdaderas. Por eso el banco te llama para confirmar compras que sí hiciste.</p>
+      <p class="just">Durante dos días de septiembre de 2013, los clientes de un banco europeo hicieron 284.807 compras con tarjeta. De ellas, 492 eran fraudes: el 0,17 %. La empresa Worldline y la Université Libre de Bruxelles publicaron esas transacciones, con las variables anonimizadas para proteger a los clientes, y las usaron para <a href="https://doi.org/10.1109/SSCI.2015.33" target="_blank" rel="noopener">estudiar cómo detectar eventos tan raros</a>. Hoy son uno de los <a href="https://zenodo.org/records/7395559" target="_blank" rel="noopener">conjuntos de datos</a> más usados para enseñar detección de fraude. Cuando el fraude es así de escaso, hasta un detector muy bueno produce más alarmas falsas que verdaderas, y por eso el banco a veces llama para confirmar una compra que sí hiciste.</p>
       <p class="leccion just"><b>Lo que enseña.</b> Sin la tasa base no se puede interpretar una prueba. Pasa igual en auditoría, en pruebas médicas y en detección de lavado de activos.</p>
       <div class="pensar"><h3>Para pensar</h3><p class="just">Si fueras el banco, ¿qué cuesta más: una alarma falsa o un fraude no detectado? ¿Cómo cambiarías el umbral de la alerta según esa respuesta?</p></div>
     </div>
@@ -1829,7 +1831,7 @@ print(f<span class="st">&quot;P(fraude | alerta) = {verdaderas / (verdaderas + f
   </header>
   <div class="cols">
     <div class="relato">
-      <p class="just">Entre 2002 y 2005 los bancos de Taiwán repartieron tarjetas de crédito y crédito rotativo a gente sin capacidad de pago. En 2005–2006 estalló la morosidad y el gobierno tuvo que intervenir. I-Cheng Yeh y Che-hui Lien publicaron en 2009 los datos de 30.000 clientes de un banco taiwanés durante esa crisis: perfil, cupo, facturas y pagos de seis meses, y si incumplieron el mes siguiente.</p>
+      <p class="just">Entre 2002 y 2005, los bancos de Taiwán compitieron por repartir tarjetas de crédito y crédito rotativo, muchas veces a personas sin capacidad de pago. Hacia 2006 la morosidad se disparó y el gobierno tuvo que intervenir para reestructurar las deudas. Con información de 30.000 clientes de uno de esos bancos, I-Cheng Yeh y Che-hui Lien <a href="https://doi.org/10.1016/j.eswa.2007.12.020" target="_blank" rel="noopener">compararon métodos</a> para predecir quién iba a incumplir, y dejaron los <a href="https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients" target="_blank" rel="noopener">datos públicos</a>: perfil del cliente, cupo, facturas y pagos de seis meses.</p>
       <p class="leccion just"><b>Lo que enseña.</b> Es una base ideal para clasificar variables antes de calcular nada: sexo es nominal, educación es ordinal, el cupo es de razón, y hay códigos que no aparecen en la documentación.</p>
       <div class="pensar"><h3>Para pensar</h3><p class="just">Un retraso de un mes en septiembre sube la probabilidad de incumplir de 22 % a 50 %. ¿Eso significa que el retraso causa el incumplimiento? ¿Cómo usaría un banco esa información y qué riesgos de discriminación tiene usar sexo o edad?</p></div>
     </div>
@@ -1979,7 +1981,7 @@ print(f<span class="st">&quot;(NOT retraso) AND (NOT cupo bajo):     {(~retraso 
 <a class="arriba" href="#inicio">↑ Índice</a>
 
 <footer><div class="wrap">
-  <p><b>Estadística con casos reales</b> · Material preparado por <b>Sebastián Tabares</b> para Probabilidad y Estadística Fundamental, Grupo 19, Universidad Nacional de Colombia.</p>
+  <p><b>Estadística con casos reales</b> · Material de las monitorías de Probabilidad y Estadística Fundamental, Grupo 19, preparado por <b>Sebastián Tabares</b>, Universidad Nacional de Colombia.</p>
   <p>Datos y scripts en <a href="https://github.com/setase-24/Probabilidad_y_Estadistica_Fundamental_Grupo-19" target="_blank" rel="noopener">github.com/setase-24/Probabilidad_y_Estadistica_Fundamental_Grupo-19</a>. Cada conjunto de datos tiene su ficha en <code>datos/LEEME.md</code> con fuente, licencia y advertencias.</p>
   <p>Donde los datos originales no son públicos (JPMorgan, los CDO de 2008), el caso lo dice y usa datos reales del mercado que muestran el mismo fenómeno.</p>
 </div></footer>
