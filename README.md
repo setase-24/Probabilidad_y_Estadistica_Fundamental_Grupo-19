@@ -1,8 +1,8 @@
 # Probabilidad y Estadística Fundamental · Grupo 19
 
-## Estadística con casos reales
+## Estudios de Caso
 
-Material de apoyo para la Facultad de Ciencias Económicas, preparado por **Sebastián Tabares**.
+Material complementario del primer módulo, preparado por **Sebastián Tabares** para las monitorías del curso (estudiantes de la Facultad de Ciencias Económicas).
 
 Doce casos que pasaron de verdad en economía y finanzas (Reinhart y Rogoff, Madoff, la ballena de Londres, la crisis de 2008, el Literary Digest, Berkeley 1973, entre otros). Cada caso trae sus datos y un script en R y en Python que se resuelve con los temas del primer parcial: variables y escalas, estadística descriptiva de una y dos variables, conteo, probabilidad condicional y teorema de Bayes.
 
